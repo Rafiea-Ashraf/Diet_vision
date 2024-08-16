@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0 30px; /* Increased padding on the sides */
+    background-image: url('abstract-background.jpg');
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333; /* Changed navbar text color */
+    padding: 15px 30px; /* Increased padding for navbar */
+    border-bottom: 2px solid #006400; /* Added bottom border */
+    margin-bottom: 20px; /* Added margin to push content down */
+}
+
+#logo {
+    max-height: 50px;
+    width: auto;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right i {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.calendar-container, .app-image {
+    width: 48%;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    margin-bottom: 20px;
+}
+
+#calendar {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#calendar .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+    background-color: #ffa500; /* Orange header */
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#calendar .weekdays {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#calendar .weekdays div, #calendar .days div {
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+#calendar .days {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+}
+
+#calendar .days div {
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#calendar .highlight {
+    background-color: #ffa500; /* Orange highlight */
+    color: white;
+    border-radius: 50%;
+}
+
+#calendar .today {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.app-image {
+    width: 10%; /* Adjusted width to 10% of the container */
+    float: right; /* Float to the right side */
+    margin-left: 20px; /* Added margin on the left side for spacing */
+    margin-bottom: 50px; /* Added margin between calendar and app image */
+    overflow: hidden; /* Ensure image doesn't overflow */
+    position: relative;
+    margin-right: 50px;
+}
+
+.app-image img {
+    width: 100%; /* Ensure image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+.heading {
+    clear: right; /* Clear floats to prevent content from wrapping around the image */
+}
+
+.heading h2,
+.heading p {
+    margin-bottom: 20px; /* Added margin to create space between heading and paragraph */
+}
+
+.mobile-line {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; /* Adjusted margin from top */
+}
+
+.report-section {
+    width: 100%; /* Full width */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.report-section h2 {
+    color: #006400;
+    margin-bottom: 10px;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Adjusted alignment */
+    margin-bottom: 20px;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 100, 0, 0.2); /* Light green background */
+}
+
+.circle .label {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #006400; /* Dark green color */
+    margin-bottom: 5px;
+}
+
+.circle .value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #006400; /* Dark green color */
+}
+
+.circle.taken {
+    order: 1; /* Left side */
+}
+
+.circle.remaining {
+    order: 3; /* Right side */
+}
+
+.circle.consumed {
+    order: 2; /* Center */
+    font-size: 1.5em; /* Larger font size */
+    margin-top: -10px; /* Adjusted positioning */
+    padding: 10px; /* Added padding */
+}
+
+.meal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px; /* Added padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    border-radius: 10px;
+}
+
+.meal img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.meal .name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.meal .calories {
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.nutrients {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.nutrient {
+    width: 30%; /* Adjusted width */
+    padding: 10px; /* Added padding */
+    background-color: rgba(0, 100, 0, 0.2); /* Light green background */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px; /* Added margin bottom */
+}
+
+.nutrient img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.nutrient .label {
+    font-size: 0.8em;
+    color: #006400; /* Dark green color */
+    font-weight: bold;
+}
+
+.nutrient .value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #006400; /* Dark green color */
+}
